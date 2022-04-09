@@ -1,0 +1,15 @@
+FROM python:3.9-bullseye
+
+WORKDIR /data
+RUN mkdir /repo
+
+COPY rmSyncToGithub.sh /data
+RUN chmod +x /data/rmSyncToGithub.sh
+VOLUME /repo
+
+RUN pip install remarkable-cli
+
+RUN git config --global user.email "cori.schlegel@gmail.com"
+RUN git config --global user.name "cori schlegel"
+
+ENTRYPOINT ["/bin/bash", "/data/rmSyncToGithub.sh"]
