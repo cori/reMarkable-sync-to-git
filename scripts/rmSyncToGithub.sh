@@ -1,6 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
+notify () {
+  FAILED_COMMAND="$(caller): ${BASH_COMMAND}" \
+    # perform notification here
+}
+
+trap notify ERR
+
 echo '*+*+* 	starting the process'
 export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -i /data/id_ed25519"
 
