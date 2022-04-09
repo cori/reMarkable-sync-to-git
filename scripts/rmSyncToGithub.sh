@@ -18,7 +18,7 @@ git status
 #1. add current files to git, commit
 echo '*+*+* 	comitting loose changes'
 git add .
-git commit -a -m "$(date -u --rfc-3339=s) updates"
+git diff-index --quiet HEAD || git commit -a -m "$(date -u --rfc-3339=s) updates"
 
 #0? git pull?
 echo '*+*+* 	pulling from the remote'
@@ -31,7 +31,7 @@ remarkable-cli -a pull -d 192.168.1.105 -u root --password IAMGROOT -b /repo
 #3. add all files to git; commit
 echo '*+*+*	comitting new changes'
 git add .
-git commit -a -m "$(date -u --rfc-3339=s) updates"
+git diff-index --quiet HEAD || git commit -a -m "$(date -u --rfc-3339=s) updates"
 
 #4. git push
 echo '*+*+*	pushing'
