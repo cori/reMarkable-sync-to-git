@@ -2,8 +2,9 @@
 set -euo pipefail
 
 notify () {
-  FAILED_COMMAND="$(caller): ${BASH_COMMAND}" \
-    echo "Failed command: ${FAILED_COMMAND} -- $?"
+#   FAILED_COMMAND="$(caller): ${BASH_COMMAND}" \
+#     echo "Failed command: ${FAILED_COMMAND} -- $?"
+    echo "Error on line ${LINENO}: ${BASH_COMMAND}"
 }
 
 trap notify ERR
