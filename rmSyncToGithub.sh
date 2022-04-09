@@ -3,6 +3,8 @@ cd /repo
 git status
 
 #0? git pull?
+git remote -v
+git pull
 
 #1. add current files to git, commit
 git add .
@@ -16,3 +18,4 @@ git add .
 git commit -a -m "$(date -u --rfc-3339=s) updates"
 
 #4. git push
+GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -i /data/id_ed25519 -vvvv" git push
