@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dbclient -ttt -i /home/root/.ssh/id_remarkable_thevortex_db admin@192.168.1.122 "sh -lc" "/share/homes/cori/repos/reMarkable-contents/scripts/runRmSync.sh" < /dev/ptmx
