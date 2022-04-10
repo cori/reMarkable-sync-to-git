@@ -1,0 +1,10 @@
+[Unit]
+Description="start remote remarkable-sync script"
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/remarkable-sync
+
+[Install]
+WantedBy=multi-user.target

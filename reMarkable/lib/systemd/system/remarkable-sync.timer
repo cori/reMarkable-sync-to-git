@@ -1,0 +1,10 @@
+[Unit]
+Description:"timer for remarkable-sync; every 11 minutes on the 3s"
+
+[Timer]
+OnCalendar=*:3/11
+AccuracySec=2h
+Persistent=true
+
+[Install]
+WantedBy=network-online.target
