@@ -1,3 +1,4 @@
 #!/bin/bash
+set -euo pipefail
 
-dbclient -ttt -i /home/root/.ssh/id_remarkable_thevortex_db admin@192.168.1.122 "sh -lc" "/share/homes/cori/repos/reMarkable-contents/scripts/runRmSync.sh" < /dev/ptmx
+dbclient -ttt -i "$KEYPATH" "$SERVER_USERNAME@$SERVER_IP" "sh -lc" "$SERVER_PATH_TO_SCRIPT" < /dev/ptmx
