@@ -12,7 +12,7 @@ RUN mkdir /repo
 
 COPY scripts/rmSyncToGithub.sh /data
 RUN chmod +x /data/rmSyncToGithub.sh
-COPY scripts/runRmSync.sh /data
+#   COPY scripts/runRmSync.sh /data
 RUN chmod +x /data/runRmSync.sh
 
 VOLUME /repo /data
