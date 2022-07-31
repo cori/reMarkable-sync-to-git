@@ -7,6 +7,7 @@ notify () {
 
 trap notify ERR
 
+#   force usage of an ed25519 key, github's preference
 echo '*+*+* 	starting the process'
 export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -i /data/id_ed25519"
 
@@ -21,7 +22,7 @@ echo '*+*+* 	pulling from the remote'
 git pull
 
 echo '*+*+*	pulling from the reMarkable'
-remarkable-cli -a pull -d 192.168.1.105 -u root --password IAMGROOT -b /repo
+remarkable-cli -a pull -d $REMARKABLE_IP -u root --password $REMARKABLE_ROOT_PWD -b /repo
 
 echo '*+*+*	comitting new changes'
 git add .
