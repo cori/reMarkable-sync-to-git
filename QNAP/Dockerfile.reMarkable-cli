@@ -10,10 +10,10 @@ RUN git config --global pull.rebase true
 WORKDIR /data
 RUN mkdir /repo
 
-COPY scripts/rmSyncToGithub.sh /data
+COPY rmSyncToGithub.sh /data
 RUN chmod +x /data/rmSyncToGithub.sh
 #   COPY scripts/runRmSync.sh /data
-RUN chmod +x /data/runRmSync.sh
+# RUN chmod +x /data/runRmSync.sh
 
 VOLUME /repo /data
 
