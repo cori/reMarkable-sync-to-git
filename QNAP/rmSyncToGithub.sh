@@ -22,7 +22,7 @@ echo '*+*+* 	pulling from the remote'
 git pull
 
 echo '*+*+*	pulling from the reMarkable'
-remarkable-cli -a pull -d $REMARKABLE_IP -u root --password $REMARKABLE_ROOT_PWD -b /repo
+remarkable-cli -a pull -d $SSH_CLIENT -u root --password $REMARKABLE_ROOT_PWD -b /repo
 
 echo '*+*+*	comitting new changes'
 git add .
