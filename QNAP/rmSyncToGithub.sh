@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+env
+
 notify () {
     echo "Error on line ${LINENO}: ${BASH_COMMAND}"
 }
