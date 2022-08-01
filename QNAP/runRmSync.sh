@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 LOCAL_REPO_PATH="/share/homes/cori/repos/reMarkable-contents"
 KEY_PATH="/share/homes/cori/repos/id_ed25519"
