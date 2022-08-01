@@ -1,4 +1,4 @@
 #!/bin/bash
 set -euo pipefail
 
-dbclient -ttt -i "$KEYPATH" "$SERVER_USERNAME@$SERVER_IP" "sh -lc" "$SERVER_PATH_TO_SCRIPT" "$REMARKABLE_ROOT_PWD" < /dev/ptmx
+dbclient -ttt -i "$KEYPATH" "$SERVER_USERNAME@$SERVER_IP" "sh -l" "$SERVER_PATH_TO_SCRIPT \"$REMARKABLE_ROOT_PWD\"" < /dev/ptmx
